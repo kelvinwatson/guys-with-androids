@@ -1,22 +1,18 @@
 <template>
-  <GwaTitle msg="Guys With Androids"/>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/upload">Upload</router-link>
-      <router-link to="/support">Support</router-link>
-    </div>
+  <main id="gwa-app" class="roboto pa3">
+    <GwaTitleNav/>
+
     <router-view/>
-  </div>
+  </main>
 </template>
 
 <script>
-import GwaTitle from './components/GwaTitle.vue'
+import GwaTitleNav from './components/GwaTitleNav.vue'
 
 export default {
   name: 'App',
   components: {
-    GwaTitle
+    GwaTitleNav,
   },
   data: () =>( {
 
@@ -25,10 +21,11 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+#gwa-app {
+  font-family: 'Roboto Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
+  line-height: initial;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  /* color: #2c3e50; */
 }
 </style>

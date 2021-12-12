@@ -7,11 +7,11 @@ const routes = [{
         component: Home
     },
     {
-        path: '/support',
-        name: 'Support',
+        path: '/how-it-works',
+        name: 'HowItWorks',
         // lazy loading
         component: () =>
-            import ( /* webpackChunkName: "support" */ '../views/Support.vue')
+            import ( /* webpackChunkName: "howitworks" */ '../views/HowItWorks.vue')
     },
     {
         path: '/upload',
@@ -20,7 +20,13 @@ const routes = [{
         component: () =>
             import ( /* webpackChunkName: "upload" */ '../views/Upload.vue')
     },
-
+    {
+        path: '/support',
+        name: 'Support',
+        // lazy loading
+        component: () =>
+            import ( /* webpackChunkName: "support" */ '../views/Support.vue')
+    }
 ]
 
 const router = createRouter({
